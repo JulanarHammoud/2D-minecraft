@@ -22,7 +22,7 @@ func _physics_process(delta):
 		flip = not flip
 		$Head.flip_h = flip
 	
-	# flip velocity if zombie is flippe
+	# flip velocity if zombie is flip
 	velocity.x = SPEED * (-1 if flip else 1)
 	
 	# move it.
