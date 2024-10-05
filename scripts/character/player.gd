@@ -89,4 +89,4 @@ func _input(event):
 		paint_tile_prev.texture.region.position.y = y * 10
 
 func resetpos():
-	position = Vector2(randf() * tilemap.width * 16, tilemap.height)
+	position = Vector2(150, tilemap.height)
