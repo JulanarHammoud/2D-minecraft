@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c2ybsw31vsigu"]
 
-[ext_resource type="Script" path="res://Rectangle.gd" id="1_tjhts"]
+[ext_resource type="Script" path="res://scripts/Rectangle.gd" id="1_tjhts"]
 [ext_resource type="Script" path="res://scenes/square.gd" id="2_0x5nq"]
 [ext_resource type="Script" path="res://scenes/HalfOffset2.gd" id="3_14olu"]
 [ext_resource type="Script" path="res://scenes/Hexagon.gd" id="4_1r5eo"]

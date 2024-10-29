@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coql345urpbpm"
-path="res://.godot/imported/tilemap_with_corrected_triangles.png-c7c90bffd764b3249c7c73cde5ecd1d9.ctex"
+uid="uid://f87w2yibngha"
+path="res://.godot/imported/updated_tilemap_with_textured_hexagon.png-b0bce38db1658b4b92222b98d7d1f0b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilemap_with_corrected_triangles.png"
-dest_files=["res://.godot/imported/tilemap_with_corrected_triangles.png-c7c90bffd764b3249c7c73cde5ecd1d9.ctex"]
+source_file="res://assets/updated_tilemap_with_textured_hexagon.png"
+dest_files=["res://.godot/imported/updated_tilemap_with_textured_hexagon.png-b0bce38db1658b4b92222b98d7d1f0b8.ctex"]
 
 [params]
 

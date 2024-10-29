@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=9 format=3 uid="uid://bc41c1om3jxxb"]
 
-[ext_resource type="Texture2D" uid="uid://8skng8tdrxih" path="res://updated_tilemap_with_more_textured_hexagons.png" id="1_jixqw"]
+[ext_resource type="Texture2D" uid="uid://8skng8tdrxih" path="res://assets/updated_tilemap_with_more_textured_hexagons.png" id="1_jixqw"]
 [ext_resource type="Texture2D" uid="uid://dh78be0b23et2" path="res://assets/terrain.png" id="1_vnjy6"]
-[ext_resource type="Texture2D" uid="uid://3nyo1okf6twj" path="res://newhexa.png" id="2_07uwr"]
-[ext_resource type="Texture2D" uid="uid://coql345urpbpm" path="res://tilemap_with_corrected_triangles.png" id="3_fe2dk"]
+[ext_resource type="Texture2D" uid="uid://3nyo1okf6twj" path="res://assets/newhexa.png" id="2_07uwr"]
+[ext_resource type="Texture2D" uid="uid://coql345urpbpm" path="res://assets/tilemap_with_corrected_triangles.png" id="3_fe2dk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ns4ub"]
 texture = ExtResource("1_vnjy6")
