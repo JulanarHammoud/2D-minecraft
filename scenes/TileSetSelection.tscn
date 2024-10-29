@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2ybsw31vsigu"]
+
+[ext_resource type="Script" path="res://Rectangle.gd" id="1_tjhts"]
+[ext_resource type="Script" path="res://scenes/square.gd" id="2_0x5nq"]
+[ext_resource type="Script" path="res://scenes/HalfOffset2.gd" id="3_14olu"]
+[ext_resource type="Script" path="res://scenes/Hexagon.gd" id="4_1r5eo"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -667.0
+offset_top = -113.0
+offset_right = 27.0
+offset_bottom = 304.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -116.0
+offset_top = 125.0
+offset_right = 287.0
+offset_bottom = 310.0
+
+[node name="Rectangle" type="Button" parent="VBoxContainer"]
+modulate = Color(1, 1, 0.0588235, 1)
+layout_mode = 2
+text = "Rectangle"
+script = ExtResource("1_tjhts")
+
+[node name="square" type="Button" parent="VBoxContainer"]
+modulate = Color(1, 1, 0.0588235, 1)
+layout_mode = 2
+text = "Square"
+script = ExtResource("2_0x5nq")
+
+[node name="HalfOffset2" type="Button" parent="VBoxContainer"]
+modulate = Color(1, 1, 0.0588235, 1)
+layout_mode = 2
+text = "HalfOffset"
+script = ExtResource("3_14olu")
+
+[node name="Hexagon" type="Button" parent="VBoxContainer"]
+modulate = Color(1, 1, 0.0588235, 1)
+layout_mode = 2
+text = "Hexagon"
+script = ExtResource("4_1r5eo")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.352941, 0, 1, 1)
+layout_mode = 0
+offset_left = -140.0
+offset_top = -134.0
+offset_right = 80.0
+offset_bottom = -111.0
+scale = Vector2(2, 2)
+text = "Welcome to Minecraft Game"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color(0.033123, 1.16003e-07, 5.97874e-08, 1)
+layout_mode = 0
+offset_left = -131.0
+offset_top = 30.0
+offset_right = 89.0
+offset_bottom = 53.0
+scale = Vector2(2, 2)
+text = "Choose The Tile Shape:"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Rectangle" to="VBoxContainer/Rectangle" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/square" to="VBoxContainer/square" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/HalfOffset2" to="VBoxContainer/HalfOffset2" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Hexagon" to="VBoxContainer/Hexagon" method="_on_pressed"]

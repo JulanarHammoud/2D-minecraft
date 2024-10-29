@@ -13,7 +13,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var paint_tile = Tiles.STONE.tex
 
 func _ready():
+	tilemap = get_parent().get_node("TileMap")
 	resetpos()
+	
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -89,4 +91,4 @@ func _input(event):
 		paint_tile_prev.texture.region.position.y = y * 10
 
 func resetpos():
-	position = Vector2(150, tilemap.height)
+	position = Vector2(randf() * tilemap.width * 16, tilemap.height)
