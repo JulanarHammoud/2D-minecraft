@@ -57,6 +57,12 @@ We decided to change the tile shape to a hexagon, which proved to be quite chall
 To create this new TileMap, we had to use a new software program called GIMP. It took us some time to learn how to use it, so we watched tutorials to understand the basics. After a lot of trial and error, we finally managed to design a TileMap that was suitable for hexagons. We then loaded this TileMap into our game and made the necessary adjustments in the code’s scripts. Once everything was in place, it worked smoothly.
 Next, we wanted to incorporate all the different tile shapes so that the player could choose which tile shape they preferred before starting the game. We divided the work: I handled the graphics, designing an interface that allowed tile selection, while Julanar  focused on scripting to ensure the tile-switching function worked as intended. This part took additional time due to some errors that came up, which we had to troubleshoot and fix. However, in the end, everything worked perfectly, and we were able to provide a seamless tile selection option for the player
 
+
+
+https://github.com/user-attachments/assets/b67f5f85-f8aa-40a7-8a0c-a21515ca7034
+
+
+
 ~30 hours
 
 
