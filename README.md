@@ -1,16 +1,18 @@
 2D-minecraft Game 
+
 01/09-10/09
 My partner Julanar and I started learning about Godot. We watched a lot of YouTube videos to understand how to use it. We followed everything in the videos step-by-step to keep it in our minds and not forget it. It took us a lot of hours and days until we got the hang of it.
 ~20 hours
 11/09-20/09
 We started developing a Flappy Bird game at the request of Professor Roy to ensure we fully understood Godot. First, we learned to set up the main elements: the player character (the bird), the obstacles (pipes), and the environment (background). We had to figure out how to make the bird jump with a tap, adding a simple gravity effect to bring it down naturally.
 Then, we tackled creating the obstacles that move from right to left. We learned how to spawn new pipes at regular intervals, with random gaps to make the game challenging. It took time to understand how to use signals and physics in Godot, but by referencing the videos and experimenting, we finally got it to work. In the end, the game ran smoothly, and it felt great to see everything we learned come together into a playable game.
+~20 hours
 
 
 https://github.com/user-attachments/assets/3b52b247-23a2-4cb9-9e63-53cbe0b615ec
 
 
-~20 hours
+
 21/09-30/09
 We began exploring the concept of creating a Minecraft-like game and researched online through Google and YouTube to see how similar games were implemented in other engines. My partner, Julanar, and I started examining the code provided by Roy, going through it one class at a time to understand each component. We used ChatGPT to help clarify the purpose and function of each class.
 After reviewing and understanding each part, we began linking the classes together to see how they interacted. This helped us see how the game mechanics and environment could be built up step-by-step.  
