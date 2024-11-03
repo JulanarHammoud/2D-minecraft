@@ -3,7 +3,7 @@ extends Button
 # פונקציה שתעביר לסצנה הראשית עם TileSet לפי המצב השמור
 func load_scene_with_tileset(tileset_path):
 	print("Loading game scene with tileset...")
-	var main_scene_resource = load("res://game.tscn")
+	var main_scene_resource = load("res://scenes/game.tscn")
 	if main_scene_resource is PackedScene:
 		var main_scene = main_scene_resource.instantiate()
 		
