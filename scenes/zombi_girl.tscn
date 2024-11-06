@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://ln73h1wulpvs"]
+
+[ext_resource type="Script" path="res://scripts/character/zombie.gd" id="1_pulfe"]
+[ext_resource type="Texture2D" uid="uid://btgveu2jl7x3y" path="res://assets/head 3.png" id="2_ldn3d"]
+[ext_resource type="Texture2D" uid="uid://bcl2h3tbchytm" path="res://assets/char.png" id="2_wyly1"]
+[ext_resource type="Texture2D" uid="uid://dpsakel1jbu7t" path="res://assets/arm girl 1.png" id="4_y0jnh"]
+[ext_resource type="Texture2D" uid="uid://d2l6rg4naox2i" path="res://assets/arm girl 2.png" id="5_vscxc"]
+[ext_resource type="Texture2D" uid="uid://bw14mi7euvnxj" path="res://assets/leg girl.png" id="6_5got8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfiu1"]
+atlas = ExtResource("2_wyly1")
+region = Rect2(28, 20, 4, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3p51"]
+size = Vector2(10, 34)
+
+[node name="ZombieGirl" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_pulfe")
+
+[node name="Head" type="Sprite2D" parent="."]
+position = Vector2(0, -9.7931)
+scale = Vector2(0.0546875, 0.0517241)
+texture = ExtResource("2_ldn3d")
+offset = Vector2(0, -4)
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(0, 3)
+scale = Vector2(1, 1.66667)
+texture = SubResource("AtlasTexture_lfiu1")
+
+[node name="Arm0" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, -1)
+scale = Vector2(0.084091, 0.0521739)
+texture = ExtResource("4_y0jnh")
+offset = Vector2(0, 5.905)
+
+[node name="Arm1" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.0877659, 0.0543618)
+texture = ExtResource("5_vscxc")
+offset = Vector2(0, 5.905)
+
+[node name="Leg0" type="Sprite2D" parent="."]
+position = Vector2(0, 9.69614)
+scale = Vector2(-0.0429233, 0.078269)
+texture = ExtResource("6_5got8")
+offset = Vector2(0, 5.905)
+
+[node name="Leg1" type="Sprite2D" parent="."]
+position = Vector2(0, 11)
+scale = Vector2(-0.0429233, 0.0672571)
+texture = ExtResource("6_5got8")
+offset = Vector2(0, 5.905)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_r3p51")

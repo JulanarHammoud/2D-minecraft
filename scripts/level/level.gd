@@ -4,15 +4,15 @@ const BlockParticles = preload("res://scripts/level/block_particles.gd")
 
 @export var width := 256
 @export var height := 64
-@export var zombie_count := 10
+@export var zombie_count := 100
 
 var lightmap = []
 
-@export var noise: FastNoiseLite
-@export var cliff_noise: FastNoiseLite
-@export var cliff_compare_noise: FastNoiseLite
+@export var noise: FastNoiseLite = FastNoiseLite.new()
+@export var cliff_noise: FastNoiseLite = FastNoiseLite.new()
+@export var cliff_compare_noise: FastNoiseLite = FastNoiseLite.new()
 
-const ZOMBIE = preload('res://scenes/zombie.tscn')
+var ZOMBIE 
 
 var is_generating = true
 
@@ -20,8 +20,22 @@ func _ready():
 	_generate_noise_seeds()
 	clear_layer(1)
 
-	_spawn_zombies(zombie_count)
+	# בחירת נתיב לזומבי בהתאם לערכי Boy.shared_data ו-Girl.shared
+	if Boy.shared_data == 1:
+		print("Boy selected, using zombi_girl.tscn")
+		ZOMBIE = load('res://scenes/zombie.tscn')  # נתיב לזומבי חלופי
+	elif Girl.shared == 1:
+		print("Girl selected, using zombie.tscn")
+		ZOMBIE = load('res://scenes/zombi_girl.tscn')  # נתיב לזומבי רגיל
+	else:
+		print("Neither Boy.shared_data nor Girl.shared is 1. No zombies will spawn.")
+		ZOMBIE = null  # אם אף אחד מהם לא שווה ל-1, לא נטען זומבי
 
+	# יצירת זומבים אם ZOMBIE מוגדר
+	if ZOMBIE:
+		_spawn_zombies(zombie_count)
+
+	# בדיקה אם רמה נטענה, אם לא - יוצרים רמה חדשה
 	if not load_level():
 		_generate_level()
 		update_lightmap()
@@ -41,9 +55,14 @@ func _spawn_zombies(count):
 
 
 func spawn_zombie(point: Vector2):
-	var zombie = ZOMBIE.instantiate()
-	zombie.position = point
-	get_parent().add_child.call_deferred(zombie)
+	# בדיקה אם shared_data או shared שווים ל-1 לפני יצירת הזומבי
+	if Boy.shared_data == 1 or Girl.shared == 1:
+		if ZOMBIE:
+			var zombie = ZOMBIE.instantiate()
+			zombie.position = point
+			get_parent().add_child.call_deferred(zombie)
+	else:
+		print("Zombie spawning is disabled because both shared_data and shared are not 1.")
 
 
 func _generate_level():

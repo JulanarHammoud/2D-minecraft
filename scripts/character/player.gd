@@ -92,3 +92,4 @@ func _input(event):
 
 func resetpos():
 	position = Vector2(randf() * tilemap.width * 16, tilemap.height)
+#randf() * tilemap.width * 16

@@ -24,7 +24,6 @@ layer_1/name = "shadows"
 layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array()
 script = ExtResource("3_xxjoo")
-zombie_count = 5
 noise = SubResource("FastNoiseLite_gcxql")
 cliff_noise = SubResource("FastNoiseLite_mathl")
 cliff_compare_noise = SubResource("FastNoiseLite_s67s2")

@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2ybsw31vsigu"]
+[gd_scene load_steps=9 format=3 uid="uid://c2ybsw31vsigu"]
 
 [ext_resource type="Script" path="res://scripts/Rectangle.gd" id="1_tjhts"]
 [ext_resource type="Script" path="res://scenes/square.gd" id="2_0x5nq"]
 [ext_resource type="Script" path="res://scenes/HalfOffset2.gd" id="3_14olu"]
 [ext_resource type="Script" path="res://scenes/Hexagon.gd" id="4_1r5eo"]
+[ext_resource type="Texture2D" uid="uid://c4km2p1u46kis" path="res://grid.png" id="5_q5sdv"]
+[ext_resource type="Texture2D" uid="uid://cwg01on0xd62f" path="res://hexagons_grid.png" id="6_lv8de"]
+[ext_resource type="Texture2D" uid="uid://4y55h3d2jkqa" path="res://half.png" id="7_u31hg"]
+[ext_resource type="Texture2D" uid="uid://b3whmxfpwdb3u" path="res://Screenshot 2024-11-06 154129.png" id="8_5sm5l"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -71,6 +75,25 @@ offset_bottom = 53.0
 scale = Vector2(2, 2)
 text = "Choose The Tile Shape:"
 horizontal_alignment = 1
+
+[node name="Grid" type="Sprite2D" parent="."]
+position = Vector2(-287, 35)
+scale = Vector2(0.468519, 0.569307)
+texture = ExtResource("5_q5sdv")
+
+[node name="HexagonsGrid" type="Sprite2D" parent="."]
+position = Vector2(-252, 350)
+scale = Vector2(0.667832, 0.615789)
+texture = ExtResource("6_lv8de")
+
+[node name="Half" type="Sprite2D" parent="."]
+position = Vector2(473, 6)
+texture = ExtResource("7_u31hg")
+
+[node name="Screenshot2024-11-06154129" type="Sprite2D" parent="."]
+position = Vector2(512, 296)
+scale = Vector2(0.70679, 0.621324)
+texture = ExtResource("8_5sm5l")
 
 [connection signal="pressed" from="VBoxContainer/Rectangle" to="VBoxContainer/Rectangle" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/square" to="VBoxContainer/square" method="_on_pressed"]
