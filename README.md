@@ -66,3 +66,15 @@ https://github.com/user-attachments/assets/b67f5f85-f8aa-40a7-8a0c-a21515ca7034
 ~30 hours
 
 
+01/11-06/11
+
+During the development of the game, we added a character selection feature, allowing the player to choose between a boy and girl character before starting the game. First, we created two buttons, one for each character, with each button triggering a function that updates the player's choice. To make the selection accessible across scenes, we set the `Boy` and `Girl` scripts as Autoload and defined global variables within them (`shared_data` for `Boy` and `shared` for `Girl`). When the player clicks on a character selection button, the appropriate variable is updated based on their choice. During development, we encountered challenges in retaining the selection across scenes and in loading only the chosen character. However, by setting the scripts as global and checking variable values during loading, we successfully ensured that only the selected character appears in the game scene, allowing for a personalized gaming experience.
+
+
+
+
+https://github.com/user-attachments/assets/0a73d0b6-df8a-40e7-9ad8-61b291531a4e
+
+
+~20 hours 
+
